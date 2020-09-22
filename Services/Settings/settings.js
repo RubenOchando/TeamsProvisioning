@@ -4,12 +4,12 @@ module.exports = () => {
             AUTH_URL: "https://login.microsoftonline.com/",
             GRAPH_URL: "https://graph.microsoft.com/",
             TEMPLATE_FILE_EXTENSION: ".json.txt",
-            TENANT: process.env["TENANT"],
-            TENANT_NAME: process.env["TENANT_NAME"],
-            CLIENT_ID: process.env["CLIENT_ID"],
-            CLIENT_SECRET: process.env["CLIENT_SECRET"],
-            TEMPLATE_SITE_URL: process.env["TEMPLATE_SITE_URL"],
-            TEMPLATE_LIB_NAME: process.env["TEMPLATE_LIB_NAME"]
+            TENANT: "16518b96-58d8-41fc-8410-8bc114322a52",
+            TENANT_NAME: "pointtaken",
+            CLIENT_ID: "e9671aaf-29dd-403e-9fb2-50da084dc222",
+            CLIENT_SECRET: "~XCSg.cc5~JFr-9eVGjy1xFQIr.I2x3.jt",
+            TEMPLATE_SITE_URL: "/sites/ptrohJSONmodel",
+            TEMPLATE_LIB_NAME: "code"
         };
     return settings;
 }

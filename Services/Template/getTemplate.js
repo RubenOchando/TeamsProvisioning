@@ -13,8 +13,16 @@ module.exports = function getTemplate(context, token, jsonTemplate,
     return new Promise((resolve, reject) => {
 
         var template;   // The template as a JavaScript object
-
+        
+        context.log('Token ' + token);  
+        context.log('TENANT_NAME ' + settings().TENANT_NAME);   
+        context.log('TEMPLATE_SITE_URL ' + settings().TEMPLATE_SITE_URL);    
         // 1. Get ID of the SharePoint site where template files are stored
+        var aux;
+        aux = getSiteId(context, token, settings().TENANT_NAME, 
+        settings().TEMPLATE_SITE_URL);
+        context.log('siteID' + aux);
+
         getSiteId(context, token, settings().TENANT_NAME, 
             settings().TEMPLATE_SITE_URL)
         .then((siteId) => {
@@ -49,6 +57,7 @@ module.exports = function getTemplate(context, token, jsonTemplate,
             resolve(JSON.stringify(template));
         })
         .catch((ex) => {
+            context.log(ex);
             reject(`Error in getTemplate(): ${ex}`);
         });
 

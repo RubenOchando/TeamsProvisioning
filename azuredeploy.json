@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "resources": [
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2019-06-01",
+      "name": "stgtestdeleteasap22",
+      "location": "westeurope",
+      "sku": {
+        "name": "Standard_LRS"
+      },
+      "kind": "StorageV2",
+      "properties": {
+        "supportsHttpsTrafficOnly": true
+      },
+      "resources":[
+                  
+      {
+           "name": "[concat('stgtestdeleteasap22', '/default/create-team-completion-queue')]",
+            "type": "Microsoft.Storage/storageAccounts/queueServices/queues",
+            "apiVersion": "2019-06-01",
+             "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts', 'stgtestdeleteasap22')]"
+            ]
+        },
+        {
+            "name": "[concat('stgtestdeleteasap22','/default/create-team-request-queue')]",
+            "type": "Microsoft.Storage/storageAccounts/queueServices/queues",
+            "apiVersion": "2019-06-01",
+            "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts', 'stgtestdeleteasap22')]"
+            ]
+
+        }  
+    
+      ]
+
+    }
+
+  ]
+}

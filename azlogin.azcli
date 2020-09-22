@@ -1,0 +1,7 @@
+#AZ login
+az login
+RESORCE_GROUP = "testdeleteasap"
+templateFile  = "C:\Users\ruoch\Documents\PT\Project\Learning\Azure\Functions\TeamsProvisioning\azuredeploy.json"
+
+az group create --name testdeleteasap --location "westeurope"
+az deployment group create --name ptrohblanktemplate --resource-group testdeleteasap --template-file "C:\Users\ruoch\Documents\PT\Project\Learning\Azure\Functions\TeamsProvisioning\azuredeploy.json"

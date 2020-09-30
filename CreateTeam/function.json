@@ -9,6 +9,11 @@
       "connection": "AzureWebJobsStorage"
     },
     {
+      "type": "http",
+      "direction": "out",
+      "name": "$return"
+    },
+    {
       "type": "queue",
       "direction": "out",
       "name": "myOutputQueueItem",

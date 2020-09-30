@@ -1,17 +1,12 @@
 
-const req = require('request');
-var express = require('express'); 
-var app = express();  
 const settings = require('../Services/Settings/settings');
 const getToken = require('../Services/Token/getToken');
 const getTemplate = require('../Services/Template/getTemplate');
 const createTeam = require('../Services/Team/createTeam');
 const getChannelId = require('../Services/Team/getChannelId');
 
-module.exports = async function (context, myQueueItem, req) {
-  
-        context.log('Node.js HTTP trigger function processed a request. RequestUri=' + req.originalUrl);
-        context.log('Request Headers = ' + JSON.stringify(req.headers));
+module.exports = async function (context, myQueueItem) {
+
         
         var token = "";
 

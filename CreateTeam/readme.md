@@ -9,3 +9,4 @@ For a `QueueTrigger` to work, you provide a path which dictates where the queue 
 ## Learn more
 
 <TODO> Documentation
+  [![Build Status](https://dev.azure.com/ptrohWEorg/TeamsProvisioning/_apis/build/status/ptrohazfunctionjsgraph%20-%20CI?branchName=master)](https://dev.azure.com/ptrohWEorg/TeamsProvisioning/_build/latest?definitionId=14&branchName=master)

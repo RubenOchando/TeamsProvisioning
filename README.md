@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/ptrohWEorg/TeamsProvisioning/_apis/build/status/ptrohazfunctionjsgraph%20-%20CI?branchName=master)](https://dev.azure.com/ptrohWEorg/TeamsProvisioning/_build/latest?definitionId=14&branchName=master)
+
 # TeamsProvisioning Sample
 
 This repository contains a set of Azure Functions for Microsoft Teams provisioning. They're designed to work in concert with Microsoft Flow or Logic Apps to handle the business process, and to create Teams based on "templates" (JSON files) stored in SharePoint. Given these tools, a Microsoft partner or customer can create a scalable Teams provisioning solution tailored to their needs.
